@@ -1,0 +1,112 @@
+/* Menggunakan variabel CSS untuk tema */
+:root {
+    --primary-color: #3498db;  /* Warna utama */
+    --secondary-color: #2ecc71; /* Warna sekunder */
+    --font-family: 'Arial', sans-serif; /* Jenis font */
+    --font-size-base: 16px; /* Ukuran font dasar */
+    --spacing: 1rem; /* Jarak dasar */
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: var(--spacing);
+    text-align: center;
+}
+
+/* Navigasi */
+nav {
+    margin: var(--spacing) 0;
+}
+
+nav ul {
+    display: flex; /* Flexbox untuk navigasi horizontal */
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 var(--spacing);
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: var(--spacing);
+    transition: background-color 0.3s; /* Transisi halus */
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-color); /* Efek hover */
+}
+
+/* Seksi umum */
+section {
+    padding: var(--spacing);
+    margin: var(--spacing) 0;
+    background: white;
+    border-radius: 8px; /* Sudut melengkung */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+}
+
+/* Formulir */
+form {
+    display: grid; /* CSS Grid untuk layout form */
+    gap: var(--spacing);
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    padding: var(--spacing);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Tombol */
+button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: var(--spacing);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: var(--spacing);
+    background: #333;
+    color: white;
+}
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Navigasi vertikal pada perangkat kecil */
+    }
+    
+    nav ul li {
+        margin: var(--spacing) 0; /* Jarak vertikal */
+    }
+}
